@@ -46,20 +46,32 @@ class ulamek
             }
         }
     }
+    void Powieksz(){
+        int R;
+        int Oile;
+        cout<< "Czy chcesz rozszerzyc podany ulamek? (wpisz 1 by zatwierdzic)"<<endl;
+        cin >> R;
+        if(R==1){
+            cout<< "O ile chcesz rozszerzyc? :"<<endl;
+        cin >> Oile;
+         cout <<"Rozszerzony ulamek to: "<< licznikPV*Oile <<"/"<<mianownikPV*Oile <<endl;
+        }
+    }
+
 
 };
 
 int main() {
-    ulamek A(100,2);
+    int l=1;
+    int m=1;
+    cout <<"Podaj licznik:"<<endl;
+    cin >> l;
+    cout <<"Podaj mianownik:"<<endl;
+    cin >> m;
+
+    ulamek A(l,m);
     A.Wynik();
     cout <<"----------------"<<endl;
-    ulamek B(10.5,2);
-    B.Wynik();
-    cout <<"----------------"<<endl;
-    ulamek C(1,0);
-    C.Wynik();
-    cout <<"----------------"<<endl;
-    ulamek D(0,1);
-    D.Wynik();
-    cout <<"----------------"<<endl;
-}
+    A.Powieksz();
+} 
+   

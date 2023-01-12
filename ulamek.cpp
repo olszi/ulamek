@@ -52,4 +52,14 @@ class ulamek
 int main() {
     ulamek A(100,2);
     A.Wynik();
+    cout <<"----------------"<<endl;
+    ulamek B(10.5,2);
+    B.Wynik();
+    cout <<"----------------"<<endl;
+    ulamek C(1,0);
+    C.Wynik();
+    cout <<"----------------"<<endl;
+    ulamek D(0,1);
+    D.Wynik();
+    cout <<"----------------"<<endl;
 }

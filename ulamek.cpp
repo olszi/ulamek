@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 using namespace std;
-
+int ktoraPetla = 0;
 class ulamek
 {
     int licznikPV,mianownikPV;
@@ -60,18 +60,43 @@ class ulamek
 
 
 };
+void Tekst(){
+    int p =0;
+    cout << "Co chcesz zrobic?" <<endl;
+    cout << "1.Wprowadzic kolejny ulamek" << endl;
+    cout <<"2.Rozszerzyc poprzednio podany ulamek" << endl;
+    cout << "3.Skrocic poprzednio podany ulamek" << endl;
+    cout << "4.Zobaczyc mozliwe skrocenia poprzedniego ulameka" << endl;
+    cin >> p;
+    if (p==1){
+        int l=1;
+        int m=1;
+        cout <<"Podaj licznik:"<<endl;
+        cin >> l;
+        cout <<"Podaj mianownik:"<<endl;
+        cin >> m;
+        ulamek ktoraPetla(l,m);
+        ktoraPetla.Wynik();
+        Tekst();
+    }else if (p == 2){
+       
+    }
+    ktoraPetla++;
+
+};
 
 int main() {
     int l=1;
     int m=1;
+    cout << "Witaj!" <<endl;
     cout <<"Podaj licznik:"<<endl;
     cin >> l;
     cout <<"Podaj mianownik:"<<endl;
     cin >> m;
-
+    Tekst();
     ulamek A(l,m);
     A.Wynik();
-    cout <<"----------------"<<endl;
-    A.Powieksz();
+ cout <<"----------------"<<endl;
+   // A.Powieksz();
 } 
    
